@@ -60,7 +60,8 @@ function onAction_btnShowFilters(event) {
 
 	var toolbarPropName = 'toolbarfilter.' + controller.getName();
 	/** @type {String} */
-	var toolbarFilterProp = scopes.svyProperties.getPropertyValue(toolbarPropName);
+	var toolbarFilterProp
+//	var toolbarFilterProp = scopes.svyProperties.getPropertyValue(toolbarPropName);
 	if (toolbarFilterProp) {
 		/** @type {Array} */
 		var toolbarFilters = JSON.parse(toolbarFilterProp);
@@ -124,7 +125,9 @@ function onFilterAdded(tbFilter) {
 	if (formComponent && !formComponent.visible) {
 		formComponent.visible = true;
 		var ngGrid = elements['groupingtable'];
-		if (ngGrid) ngGrid.setLocation(0, 40);
+		if (ngGrid) {
+			// ggfs. Position anpassen
+		}
 	}
 	// Hier ggfs. Wertelisten überschreiben, bzw. in den vererbten Funktionen.
 }
@@ -144,7 +147,9 @@ function onFilterRemoved(tbFilter) {
 		if (!activeFilters || activeFilters.length === 0) {
 			formComponent.visible = false;
 			var ngGrid = elements['groupingtable'];
-			if (ngGrid) ngGrid.setLocation(0, 0);
+			if (ngGrid) {
+				// ggfs. Position anpassen
+			}
 		}
 	}
 }
@@ -188,7 +193,8 @@ function onFilterSave(itemIndex, parentIndex, isSelected, parentText, menuText) 
 		
 		var toolbarPropName = 'toolbarfilter.' + controller.getName();
 		/** @type {String} */
-		var toolbarFilterProp = scopes.svyProperties.getPropertyValue(toolbarPropName);
+		var toolbarFilterProp
+//		var toolbarFilterProp = scopes.svyProperties.getPropertyValue(toolbarPropName);
 		
 		var toolbarFilterEntry = {name: input, filter: toolbarState};
 		var toolbarFilterArray;
@@ -198,7 +204,7 @@ function onFilterSave(itemIndex, parentIndex, isSelected, parentText, menuText) 
 		} else {
 			toolbarFilterArray = [toolbarFilterEntry];
 		}
-		scopes.svyProperties.setUserProperty(toolbarPropName, JSON.stringify(toolbarFilterArray));
+//		scopes.svyProperties.setUserProperty(toolbarPropName, JSON.stringify(toolbarFilterArray));
 	}
 }
 
