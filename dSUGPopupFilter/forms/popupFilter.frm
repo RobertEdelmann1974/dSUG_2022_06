@@ -16,17 +16,16 @@ width:"200"
 formIndex:0,
 tabs:[
 {
-containedForm:"2431F57E-8E7F-42AD-8ACE-A62A725BBD89",
-hideCloseIcon:true,
-name:"order",
-svyUUID:"9AA57B50-8B0A-460B-93FC-A3BD5F0A512F",
-text:"Order"
+containedForm:"880C3169-C9C2-4EA5-A36B-CC6065295857",
+name:"text_Orders_order_detail",
+svyUUID:"47C9C198-DCBE-4284-95D9-506D9E37809E",
+text:"Orders_order_detail"
 },
 {
-containedForm:"75F2B76E-7EDB-44D4-BC47-2BDCD1B825FC",
-name:"customers",
+containedForm:"5529E5B1-603A-4F30-BFAC-C0FBAC4CD142",
+name:"tapiURL",
 svyUUID:"6FC98DB3-8801-4F37-B523-F0B8F001F270",
-text:"Customers"
+text:"Bonus: Telefonie"
 }
 ]
 },
