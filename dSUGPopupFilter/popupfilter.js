@@ -3,19 +3,6 @@
  * @properties={typeid:24,uuid:"26C0E710-85EA-4236-8D91-ED5017D48D4F"}
  */
 function setupPopupFilter() {
-	var ngFilterKey = scopes.svySecurityManager.getKey('NG_Filter')
-	if (ngFilterKey) {
-		scopes.svySecurityManager.addRuntimeKey(ngFilterKey.keyId, ngFilterKey.name);
-	}
-	if (application.isInDeveloper() || scopes.BauProCheck.isUserTesting(scopes.BauProCheckDefaults.userId, scopes.BauProCheckDefaults.organisationId)) {
-		var ngFilterTestKey = scopes.svySecurityManager.getKey('NG_Filter_Test')
-		scopes.svySecurityManager.addRuntimeKey(ngFilterTestKey.keyId, ngFilterTestKey.name);
-	} else {
-		var noNGFilterKey = scopes.svySecurityManager.getKey('No_NG_Filter')
-		if (noNGFilterKey) {
-			scopes.svySecurityManager.addRuntimeKey(noNGFilterKey.keyId, noNGFilterKey.name);
-		}
-	}
 	scopes.svyPopupFilter.LOCALE = {
 		filterPopupMenu: {
 			addFilter: 'Filter hinzufügen'
