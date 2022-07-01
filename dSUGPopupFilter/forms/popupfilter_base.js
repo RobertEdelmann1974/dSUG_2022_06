@@ -29,9 +29,6 @@ var toolbarFilter;
  * @properties={typeid:24,uuid:"F8FAE2AE-5745-484C-BA45-2A2972DCF052"}
  */
 function onLoad(event) {
-	var jsForm = solutionModel.getForm(controller.getName());
-	var fields = jsForm.getFields(true);
-
 	if (application.getApplicationType() === APPLICATION_TYPES.NG_CLIENT && elements['filterComponent']) {
 		/** @type {RuntimeWebComponent<aggrid-groupingtable>} */
 		var ngGrid = elements['groupingtable'];
