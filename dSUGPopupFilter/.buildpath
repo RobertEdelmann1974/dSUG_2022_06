@@ -9,4 +9,5 @@
 	<buildpathentry exported="true" kind="prj" path="/svySearch"/>
 	<buildpathentry exported="true" kind="prj" path="/svySecurity"/>
 	<buildpathentry exported="true" kind="prj" path="/svyUtils"/>
+	<buildpathentry exported="true" kind="prj" path="/svyUtils$customDialogs"/>
 </buildpath>

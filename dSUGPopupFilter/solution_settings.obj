@@ -1,4 +1,6 @@
-modulesNames:"svyProperties,svySecurity,svyUtils,svySearch,svyNavigation,svyNavigationUX,svyLookup,svyPopupFilter",
+firstFormID:"B4219976-7C56-45B3-933C-83807E80E15A",
+modulesNames:"svyProperties,svySecurity,svyUtils,svySearch,svyNavigation,svyNavigationUX,svyLookup,svyPopupFilter,svyUtils$customDialogs",
+onOpenMethodID:"26C0E710-85EA-4236-8D91-ED5017D48D4F",
 styleSheetID:"DC78BDF2-726C-48C9-8847-9884D5AC6AFF",
 typeid:43,
 uuid:"A9485ECE-A96D-4A9E-B3FE-0D7C4F40772D"

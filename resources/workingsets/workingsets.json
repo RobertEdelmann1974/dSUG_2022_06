@@ -1,12 +1,1 @@
-[
-{
-"name":"popupFilter",
-"paths":[
-"/dSUGPopupFilter/.project",
-"/dSUGPopupFilter/forms/dsugPopupFilterDate.frm",
-"/dSUGPopupFilter/forms/dsugPopupFilterNumber.frm",
-"/dSUGPopupFilter/forms/dsugPopupFilterSelect.frm",
-"/dSUGPopupFilter/forms/dsugPopupFilterToken.frm"
-]
-}
-]
+[]
