@@ -7,9 +7,11 @@
  */
 function onLoad(event) {
 	_super.onLoad(event)
-	toolbarFilter.addFilter('Preis einzelne Order','itemPrice',scopes.svyToolbarFilter.FILTER_TYPES.NUMBER);
-	var filterItemPrice = toolbarFilter.addFilter('Produkt','itemname',scopes.svyToolbarFilter.FILTER_TYPES.TOKEN);
-	filterItemPrice.text = 'anderer Text Produkt';
+	
+	toolbarFilter.addFilter('Preis einzelne Order','orders_to_order_details.unitprice',scopes.svyToolbarFilter.FILTER_TYPES.NUMBER);
+	toolbarFilter.addFilter('Produktname - Text','orders_to_order_details.order_details_to_products.productname',scopes.svyToolbarFilter.FILTER_TYPES.TOKEN);
+	var filterItemSelect = toolbarFilter.addFilter('Auswahl Produkt','orders_to_order_details.productid',scopes.svyToolbarFilter.FILTER_TYPES.TOKEN);
+	filterItemSelect.valuelist = 'products';
 	toolbarFilter.setOnFilterApplyQueryCondition(onFilterQueryCondition);
 }
 
@@ -32,23 +34,9 @@ function onFilterQueryCondition(query, dataprovider, operator, values, filter) {
 	if (!values || !values.length) return true;
 	var or;
 	switch (dataprovider) {
-	case "itemPrice":
-		application.output('operator: ' + operator);
-		application.output('values: ' + values.join(' >-< '));
-		/** @type {QBSelect<db:/example_data/order_details>} */
-		var jOrderDetails = query.joins.add(datasources.db.example_data.order_details.getDataSource(), JSRelation.LEFT_OUTER_JOIN);
-		if (operator == 'eq') {
-			or.add(jOrderDetails.columns.unitprice.eq(utils.stringToNumber(values[0])));
-		} else if (operator == 'gt') {
-			or.add(jOrderDetails.columns.unitprice.gt(utils.stringToNumber(values[0])));
-		} else if (operator == 'lt') {
-			or.add(jOrderDetails.columns.unitprice.lt(utils.stringToNumber(values[0])));
-		} else if (operator == 'lt') {
-			or.add(jOrderDetails.columns.unitprice.lt(utils.stringToNumber(values[0])));
-		} else if (operator == 'between') {
-			or.add(jOrderDetails.columns.unitprice.between(utils.stringToNumber(values[0]), utils.stringToNumber(values[1])));
-		}
+	case "....":
 		or = query.or;
+// hier Query selber festlegen
 		query.where.add(or);
 		return false;
 		break;
