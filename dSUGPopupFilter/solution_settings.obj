@@ -3,4 +3,5 @@ modulesNames:"svyProperties,svySecurity,svyUtils,svySearch,svyNavigation,svyNavi
 onOpenMethodID:"26C0E710-85EA-4236-8D91-ED5017D48D4F",
 styleSheetID:"DC78BDF2-726C-48C9-8847-9884D5AC6AFF",
 typeid:43,
-uuid:"A9485ECE-A96D-4A9E-B3FE-0D7C4F40772D"
+uuid:"A9485ECE-A96D-4A9E-B3FE-0D7C4F40772D",
+version:"1.0.0"
